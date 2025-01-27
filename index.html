@@ -4,10 +4,314 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Friends Agency</title>
-    <link rel="stylesheet" href="FriendsS.css">
+    <style>
+    body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar {
+    background-color: #FFF;
+    color: white;
+    padding: 10px 20px;
+    
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 3px solid white; /* White border outline */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optional shadow effect */
+    border-radius: 0px; /* Rounded corners */
+}
+
+/* Style for the logo container */
+.navbar .logo {
+    display: flex;
+    align-items: center;  /* Vertically center the items */
+    gap: 10px;  /* Space between the logo image and text */
+}
+
+/* Style the logo image */
+.navbar .logo img {
+    width: 100px;  /* Adjust the size of the logo */
+    height: 100px;
+}
+
+/* Style the logo text */
+.navbar .logo span {
+    font-size: 1.9rem;  /* Adjust the text size */
+    font-weight: bold;
+    color: #42D9FD;
+}
+.navbar-hr {
+    border: none; /* Removes the default border */
+    height: 2px; /* Line thickness (height) */
+    background-color: #42D9FD; /* Line color */
+    width: 100%; /* Full width */
+    margin: 10px 0; /* Space around the line */
+}
+/* Style for the navbar buttons */
+.navbar button.menu {
+    padding: 10px 10px;
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin: 0 10px;  /* Space between buttons */
+}
+
+.navbar button.menu:hover {
+  /*  background-color: #42D9FD; /* Slightly darker blue on hover */
+    transform: scale(1.05); /* Slight scaling effect */
+}
+
+/* Align the navbar buttons correctly */
+.navbar button.menu a {
+    text-decoration: none;
+    color: white;
+}
+
+/* Additional styling for menu links (on hover) */
+.navbar button.menu:hover a {
+    color: #fff;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .navbar button.menu {
+        
+        margin-bottom: 10px;
+    }
+
+    .navbar .logo {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+    }
+}
+
+
+
+
+
+.home {
+    background-image: url('hero-background.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.home h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.home p {
+    font-size: 1.2rem;
+}
+
+.services, .portfolio, .contact {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.service-item {
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    max-width: 800px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.service-image {
+    width: 100%;
+    max-width: 400px;
+    margin: 15px 0;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.portfolio-images {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.portfolio-image {
+    width: 30%;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+input, textarea {
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #42D9FD;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+button:hover {
+    background-color: #42D9FD;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+html, body {
+    overflow-x: hidden;
+}
+
+img, .container {
+    max-width: 100%;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+
+    }
+
+    .navbar ul {
+        flex-direction: column;
+    }
+
+    .service-item {
+        max-width: 100%;
+    }
+
+    .portfolio-image {
+        width: 100%;
+    }
+}
+
+
+.contact {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 600px;
+    margin: 0 auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact h2 {
+    text-align: center;
+    color: #333;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+label {
+    font-size: 14px;
+    font-weight: bold;
+    color: #555;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: #007BFF;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+button {
+    padding: 10px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+.contact-details {
+    margin-top: 30px;
+}
+
+.contact-details p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.contact-details h3, .contact-details h4 {
+    margin-top: 20px;
+}
+
+.contact-details a {
+    text-decoration: none;
+    color: #007BFF;
+}
+
+.contact-details a:hover {
+    text-decoration: underline;
+}
+
+    
+    </style>
 </head>
 <body>
-
+     
 
 
 <br>
@@ -18,56 +322,212 @@
 
 <section id="services" class="services">
     <h2>Our Services</h2>
-    
-    <div class="service-item">
-        <h3>App Development</h3>
-        <img src="app-development.jpg" alt="App Development" class="service-image">
-        <p>We create innovative and user-friendly mobile and web apps tailored to your needs.</p>
-    </div>
+    <a href="#contact">
+    <button <button style="color: white; text-decoration: none; padding: 10px; border: 1px solid white; border-radius: 5px; background-color: red; width: 200px; height: 50px;" onclick="showContact()">Get Started</button>
 
-    <div class="service-item">
-        <h3>Digital Marketing</h3>
-        <img src="digital-marketing.jpg" alt="Web Development" class="service-image">
-        <p>Boost your business visibility with our cutting-edge marketing strategies.</p>
-    </div>
 
-    <div class="service-item">
-        <h3>Web Development</h3>
-        <img src="web-development.jpg" alt="Web Development" class="service-image">
-        <p>Build stunning websites that offer seamless user experiences.</p>
-    </div>
+<a/>
+<div class="service-item">
+    <h3>App Development</h3>
+    <img src="app-development.jpg" alt="App Development" class="service-image">
+    <p>We create innovative and user-friendly mobile and web apps tailored to your needs. Our team is proficient in building apps for both Android and iOS platforms using the latest technologies like Flutter, React Native, and Swift. We offer custom app development, UI/UX design, and seamless integration with third-party services to ensure your app stands out in a competitive market.</p>
+    <ul>
+        <li>Cross-platform app development (Android & iOS)</li>
+        <li>Custom mobile solutions tailored to your needs</li>
+        <li>User-friendly design and intuitive interfaces</li>
+        <li>Seamless backend integration for enhanced performance</li>
+        <li>App store submission and optimization</li>
+    </ul>
+</div>
+
+<div class="service-item">
+    <h3>Digital Marketing</h3>
+    <img src="digital-marketing.jpg" alt="Web Development" class="service-image">
+    <p>Boost your business visibility with our cutting-edge marketing strategies. From social media campaigns to pay-per-click (PPC) advertising, our digital marketing team ensures your brand reaches the right audience at the right time. We focus on creating data-driven campaigns that generate high-quality leads and increase conversions.</p>
+    <ul>
+        <li>Search Engine Optimization (SEO)</li>
+        <li>Pay-per-click (PPC) advertising and Google Ads</li>
+        <li>Social media marketing and management</li>
+        <li>Content creation and email marketing</li>
+        <li>Conversion rate optimization (CRO)</li>
+    </ul>
+</div>
+
+<div class="service-item">
+    <h3>Web Development</h3>
+    <img src="web-development.jpg" alt="Web Development" class="service-image">
+    <p>Build stunning websites that offer seamless user experiences. Whether you need a simple landing page or a complex eCommerce platform, we create responsive, SEO-friendly websites tailored to your business goals. Our developers work with cutting-edge web technologies like HTML5, CSS3, JavaScript, and CMS platforms like WordPress and Shopify to deliver fast and secure websites.</p>
+    <ul>
+        <li>Custom website development (Responsive design)</li>
+        <li>eCommerce website solutions (Shopify, WooCommerce)</li>
+        <li>Content management systems (WordPress, Joomla)</li>
+        <li>Website redesign and optimization for better performance</li>
+        <li>Website maintenance and support</li>
+    </ul>
+</div>
+
+<div class="service-item">
+    <h3>SEO Optimization</h3>
+    <img src="seo-optimization.jpg" alt="SEO Optimization" class="service-image">
+    <p>Enhance your website's visibility and rankings with effective SEO strategies. We help you achieve higher rankings on search engines like Google and Bing, driving more organic traffic to your website. Our approach includes on-page optimization, link building, keyword research, and local SEO to ensure that your business reaches the right audience.</p>
+    <ul>
+        <li>Keyword research and on-page SEO</li>
+        <li>High-quality backlinks and link building</li>
+        <li>Local SEO to target nearby customers</li>
+        <li>Technical SEO for faster loading times and mobile optimization</li>
+        <li>Content optimization and SEO-friendly copywriting</li>
+    </ul>
+</div>
+
+
 </section>
 
 <section id="portfolio" class="portfolio">
     <h2>Our Portfolio</h2>
     <p>Check out some of our recent projects!</p>
     <div class="portfolio-images">
-        <img src="portfolio1.jpg" alt="Portfolio 1" class="portfolio-image">
-        <img src="portfolio2.jpg" alt="Portfolio 2" class="portfolio-image">
-        <img src="portfolio3.jpg" alt="Portfolio 3" class="portfolio-image">
+        <div class="portfolio-item">
+            <img src="portfolio1.jpg" alt="Portfolio 1" class="portfolio-image">
+            <p class="portfolio-description">Project 1: A mobile app designed for e-commerce businesses. It features user-friendly navigation, secure payment options, and integration with various online payment platforms.</p>
+        </div>
+        <div class="portfolio-item">
+            <img src="portfolio2.jpg" alt="Portfolio 2" class="portfolio-image">
+            <p class="portfolio-description">Project 2: A corporate website built with responsive design, offering a seamless user experience across all devices. The site includes a custom content management system (CMS) for easy content updates.</p>
+        </div>
+        <div class="portfolio-item">
+            <img src="portfolio3.jpg" alt="Portfolio 3" class="portfolio-image">
+            <p class="portfolio-description">Project 3: A digital marketing campaign for a local business aimed at increasing brand visibility and driving more traffic through social media platforms and search engine optimization.</p>
+        </div>
+        <div class="portfolio-item">
+            <img src="portfolio4.jpg" alt="Portfolio 1" class="portfolio-image">
+            <p class="portfolio-description">Project 4: A custom mobile app that integrates with smart devices for home automation, offering remote control via smartphone, along with real-time notifications and alerts.</p>
+        </div>
+        <div class="portfolio-item">
+            <img src="portfolio5.jpg" alt="Portfolio 2" class="portfolio-image">
+            <p class="portfolio-description">Project 5: A website redesign for an online magazine, with a modern, clean layout that improves readability, increases engagement, and enhances mobile experience.</p>
+        </div>
+        <div class="portfolio-item">
+            <img src="portfolio6.jpg" alt="Portfolio 3" class="portfolio-image">
+            <p class="portfolio-description">Project 6: A comprehensive SEO strategy and implementation for an e-commerce platform, focusing on on-page SEO, content optimization, and improving search engine rankings.</p>
+        </div>
     </div>
 </section>
 
-<section id="contact" class="contact">
+<section id="contact" class="contact" style="display: none;">
     <h2>Contact Us</h2>
-    <form>
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required>
-        
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
-        
-        <label for="message">Message:</label>
-        <textarea id="message" name="message" rows="4" required></textarea>
-        
-        <button type="submit">Send Message</button>
+    
+    
+    <!-- Contact Form -->
+    <form id="contact-form">
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+        <label for="message">Your Message:</label>
+        <textarea id="message" name="message" placeholder="Write your message here" rows="5" required></textarea>
+
+        <button type="button" onclick="sendMessage()">Send Message</button>
     </form>
+
+    <!-- Contact Details -->
+    <div class="contact-details">
+        <h3>Our Contact Information</h3>
+        <p><strong style = "color:black";>Address:</strong> Jameen Thoppu Street,2W,Park Stop Road, Bodinayakanur- 625513</p>
+        <p><strong style = "color:black";>Phone:</strong> <a href="tel:+919361488392">9361488392</a></p>
+        <p><strong>Email:</strong> <a href="mailto:friendsAgency@gmail.com">friendsAgency@gmail.com</a></p>
+
+        <h4>Follow Us:</h4>
+        <div class="social-links">
+            <a href="https://facebook.com/yourpage" target="_blank">Facebook</a> |
+            <a href="https://twitter.com/yourprofile" target="_blank">Twitter</a> |
+            <a href="https://instagram.com/yourprofile" target="_blank">Instagram</a> |
+            <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
+        </div>
+    </div>
 </section>
+
+    
+
+
+
 
 <footer>
     <p>&copy; 2025 Friends Agency. All rights reserved.</p>
 </footer>
 
-<script src="FriendsJ.js"></script>
+
+<script>
+    function sendMessage() {
+        const name = document.getElementById('name').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const message = document.getElementById('message').value.trim();
+
+        // Validate that all fields are filled
+        if (!name || !email || !message) {
+            alert('Please fill in all fields before sending the message.');
+            return;
+        }
+
+        // Check if email contains '@gmail.com'
+        if (!email.includes('@gmail.com')) {
+            alert('Please enter a valid Gmail address.');
+            return;
+        }
+
+        // Replace YOUR_TELEGRAM_BOT_TOKEN and YOUR_CHAT_ID with actual values
+               const token = '8145308067:AAFR6b4ZZt5JQ1ckV2Q0-AXrkTNW4TEmGxo';
+        const chatId = '6793751528';
+        const text = `New Contact Form Submission:%0A%0AName: ${name}%0AEmail: ${email}%0AMessage: ${message}`;
+        const url = `https://api.telegram.org/bot${token}/sendMessage?chat_id=${chatId}&text=${text}`;
+
+        fetch(url)
+            .then(response => {
+                if (response.ok) {
+                    alert('Message sent successfully!');
+                    document.getElementById('contact-form').reset(); // Clear the form
+                } else {
+                    alert('Failed to send the message. Please try again.');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('An error occurred while sending the message.');
+            });
+    }
+</script>
+
+
+
+<script>
+
+// Example script to enhance interactivity
+document.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', function(event) {
+        event.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        target.scrollIntoView({ behavior: 'smooth' });
+    });
+});
+
+// Form submission with alert and reset
+document.querySelector('form').addEventListener('submit', function(event) {
+    event.preventDefault();
+    alert('Your message has been sent successfully!');
+    this.reset();
+});
+
+</script>
+<script>
+function showContact() {
+    // Hide the services section and show the contact section
+    
+    document.getElementById('contact').style.display = 'block';
+    
+    
+}
+</script>
+
 </body>
 </html>
