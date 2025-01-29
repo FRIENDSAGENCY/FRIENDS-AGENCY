@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Friends Agency</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+
     <style>
     body {
     font-family: Arial, sans-serif;
@@ -71,13 +72,13 @@
 }
 
 /* Align the navbar buttons correctly */
-.navbar button.menu a {
+.navbar button.menu {
     text-decoration: none;
     color: white;
 }
 
 /* Additional styling for menu links (on hover) */
-.navbar button.menu:hover a {
+.navbar button.menu:hover {
     color: #fff;
 }
 
@@ -333,10 +334,7 @@ button:hover {
     </style>
 </head>
 <body>
-     
 
-
-<br>
 <section id="home" class="home">
     <h2>Welcome to Friends Agency</h2>
     <p>Your one-stop solution for App Development, Digital Marketing, and Web Development.</p>
@@ -344,14 +342,15 @@ button:hover {
 
 
 <section id="services2" class="services2">
+
 <h2>Elevate Your Online Presence</h2>
+
 <p>Transform your digital strategy with our expert marketing solutions. We empower businesses to thrive in the online space through tailored services. Let’s maximize your results today!</p>
+
     <a href="#contact">
     <button class = "services2" style="color: white; text-decoration: none; padding: 10px; border: 1px solid white; border-radius: 5px; background-color: red; width: 200px; height: 50px;" onclick="showContact()">Get Started</button>
     </a>
 </section>
-
-
 <section id="services" class="services">
     <h2>Our Services</h2>
     
@@ -461,24 +460,23 @@ button:hover {
     <!-- Contact Details -->
     <div class="contact-details">
         <h3>Our Contact Information</h3>
-        <p><strong style="color: black;">Address:</strong> Jameen Thoppu Street, 2W, Park Stop Road, Bodinayakanur-625513</p>
+        <p><strong style="color: black;">Address:</strong> Jameen Thoppu Street,Park Stop Road, Bodinayakanur-625513, Theni District</p>
         <p><strong style="color: black;">Phone:</strong> <a href="tel:+919361488392">9361488392</a></p>
         <p><strong>Email:</strong> <a href="mailto:friendsAgency@gmail.com">friendsAgency@gmail.com</a></p>
 
         <h4>Follow Us:</h4>
    <div class="social-links">
-    <a href="https://facebook.com/yourpage" target="_blank" aria-label="Facebook">
-        <i class="fab fa-facebook-square"></i> Facebook
-    </a> |
-    <a href="https://twitter.com/yourprofile" target="_blank" aria-label="Twitter">
-        <i class="fab fa-twitter"></i> Twitter
-    </a> |
-    <a href="https://instagram.com/yourprofile" target="_blank" aria-label="Instagram">
-        <i class="fab fa-instagram"></i> Instagram
-    </a> |
-    <a href="https://linkedin.com/in/yourprofile" target="_blank" aria-label="LinkedIn">
-        <i class="fab fa-linkedin"></i> LinkedIn
-    </a>
+
+        <i id="openUrlButton" class="fab fa-facebook-square"> Facebook</i>
+     |
+    
+        <i id="openUrlButton2" class="fab fa-linkedin"> Linkedln</i>
+    |
+
+                <i id="openUrlButton3" class="fab fa-twitter"> Twitter</i>
+     |
+    
+        <i id="openUrlButton4" class="fab fa-instagram"> Instagram</i>
 </div>
 
     </div>
@@ -488,6 +486,23 @@ button:hover {
     
 
 
+    <script>
+        document.getElementById("openUrlButton").addEventListener("click", function() {
+            window.open("https://example.com", "_blank"); 
+        });
+        
+                document.getElementById("openUrlButton2").addEventListener("click", function() {
+            window.open("https://example.com", "_blank");
+        });
+        
+                document.getElementById("openUrlButton3").addEventListener("click", function() {
+            window.open("https://example.com", "_blank"); 
+        });
+        
+                document.getElementById("openUrlButton4").addEventListener("click", function() {
+            window.open("https://www.instagram.com/hackers_team_89?igsh=MWF5dGczNnJ5enhvMQ==", "_blank"); 
+        });
+    </script>
 
 
 <footer>
